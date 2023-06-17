@@ -16,7 +16,6 @@
   "engines": {
     "node": ">=14"
   },
-  "body-parser": "^1.19.0",
   "keywords": [],
   "author": "",
   "license": "ISC",
