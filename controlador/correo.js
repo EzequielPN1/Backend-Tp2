@@ -27,7 +27,7 @@ async  enviarCorreoConfirmacion(token, email) {
       <p>"Token generado de confirmación: ${token}, email: ${email}"</p>
       <p>¡Gracias por registrarte!</p>
       <p>Para confirmar tu correo electrónico, haz clic en el siguiente enlace:</p>
-      <a href="https://server-controlgastos.glitch.me/confirmar?email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}">Confirmar registro</a>
+      <a href="https://serverControlgastos.glitch.me/confirmar?email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}">Confirmar registro</a>
     `,
   };
 
