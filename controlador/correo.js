@@ -21,7 +21,7 @@ class Mailer{
 async  enviarCorreoConfirmacion(token, email) {
   const mensaje = {
     from: 'ventaDeTicketsPN1@gmail.com',
-    to: 'ventaDeTicketsPN1@gmail.com',
+    to: email,
     subject: 'Confirmación de registro',
     html: `
       <p>"Token generado de confirmación: ${token}, email: ${email}"</p>
@@ -43,12 +43,12 @@ async  enviarCorreoConfirmacion(token, email) {
 async  enviarCorreoCambioPass(email,token) {
   const mensaje = {
     from: 'ventaDeTicketsPN1@gmail.com',
-    to: 'ventaDeTicketsPN1@gmail.com',
+    to: email,
     subject: 'Cambio de Pass',
     html: `
     <p>"Token generado de cambio de pass: ${token}, email: ${email}"</p>
       <p>Para cambiar tu contraseña, haz clic en el siguiente enlace:</p>
-      <a href="http://localhost:5173/cambioDePass?email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}">Cambiar contraseña</a>
+      <a href="https://controldegastos2-df942.web.app/cambioDePass?email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}">Cambiar contraseña</a>
     `,
   };
 
