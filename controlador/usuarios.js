@@ -63,6 +63,10 @@ class ControladorUsuario {
       const validado = validaciones.validarEdicion(celular, nombre, apellido)
       if (validado.result) {
         const usuario = await this.servicio.editarUsuario(email, celular, nombre, apellido);
+        if (config.WHATSAPP) {
+          let whatsapp = this.WhatsAppSender.convertirEnNumeroWhatsApp(usuario.celular)
+          this.WhatsAppSender.enviarBootPresentacion(whatsapp)
+        }
         console.log("Usuario " + email + " editado correctamente")
         res.status(200).json(usuario);
       }
